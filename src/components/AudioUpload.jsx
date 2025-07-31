@@ -25,7 +25,7 @@ export default function AudioUpload()
 
         try{
             setLoading(true);
-            const response=await axios.post("https://audio-transcriber-backend-m26k.onrender.com"
+            const response=await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/transcribe`
                 ,formData,{
                     headers:{
                         "Content-Type":"multipart/form-data",
