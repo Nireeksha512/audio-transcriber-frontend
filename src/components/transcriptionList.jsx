@@ -8,7 +8,7 @@ export default function TranscriptionList() {
   const [records, setRecords] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/fetch')
+    axios.get('https://audio-transcriber-backend-m26k.onrender.com/api/fetch')
       .then(res => setRecords(res.data))
       .catch(err => console.error("Error fetching transcriptions:", err));
   }, []);
